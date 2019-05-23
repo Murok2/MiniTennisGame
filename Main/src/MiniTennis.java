@@ -5,12 +5,13 @@ import javax.swing.JFrame;//с кнопками «Свернуть», «Во в�
 import javax.swing.JPanel;// представляющий собой прямоугольное пространство, на котором можно размещать другие элементы
 import javax.swing.JOptionPane;
 
-public class MiniTennis extends JPanel{
+public class MiniTennis extends JPanel{ //расширяет возможности JPanel
     Racquet racquet = new Racquet(this);
     Ball ball = new Ball(this);
     int speed = 1;
 
     private int getScore() {
+
         return speed -1 ;
     }
     public MiniTennis() {
@@ -29,7 +30,7 @@ public class MiniTennis extends JPanel{
         setFocusable(true); //не устанавливает фокус сам по себе, он просто дает возможность потенциально сосредоточиться на компонент
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException { //выбрасывает ошибки в методе
         MainGame();
     }
     public static void MainGame() throws InterruptedException {
@@ -37,7 +38,7 @@ public class MiniTennis extends JPanel{
         MiniTennis game = new MiniTennis();
         JFrame frame = new JFrame();
         frame.add(game);
-        frame.setSize(300, 400);
+        frame.setSize(500, 600);
         frame.setVisible(true);//makes the frame appear onscreen
         frame.setBackground(Color.BLACK);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//The EXIT_ON_CLOSE operation exits the program when your user closes the frame
@@ -73,7 +74,7 @@ public class MiniTennis extends JPanel{
                 "Game is end",
                 JOptionPane.YES_NO_OPTION);
         if (n == JOptionPane.YES_OPTION) {
-            ball.yspd = -1;
+            ball.yspd = 0;
         } else {
             System.exit(ABORT);
         }

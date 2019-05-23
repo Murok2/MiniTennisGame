@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class Racquet {
-    private static final int Y = 350;
+    private static final int Y = 550;
     private static final int WIDTH = 80;
     private static final int HEIGHT = 10;
 
