@@ -17,7 +17,6 @@ public class MiniTennis extends JPanel{ //расширяет возможнос�
     public MiniTennis() {
         addKeyListener(new KeyListener() {
             public void keyTyped(KeyEvent e) {
-
             }
             public void keyPressed(KeyEvent e) {
                 racquet.keyPressed(e);
@@ -41,14 +40,14 @@ public class MiniTennis extends JPanel{ //расширяет возможнос�
         frame.setSize(500, 600);
         frame.setVisible(true);//makes the frame appear onscreen
         frame.setBackground(Color.BLACK);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//The EXIT_ON_CLOSE operation exits the program when your user closes the frame
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         while (true) {
             game.move();
             game.repaint();
-            Thread.sleep(9);
+            Thread.sleep(13);
         }
     }
-    public void paint(Graphics g) {
+    public void paint(Graphics g) {//Графический контекст отвечает за любой рисунок в игре
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
@@ -57,7 +56,7 @@ public class MiniTennis extends JPanel{ //расширяет возможнос�
         racquet.paint(g2d);
 
         g2d.setColor(Color.BLACK);
-        g2d.setFont(new Font("Verdana", Font.BOLD, 30));
+        g2d.setFont(new Font("Tahoma", Font.BOLD, 30));
         g2d.drawString(String.valueOf(getScore()), 10, 30);
 
     }
