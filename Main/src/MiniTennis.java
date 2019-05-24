@@ -39,7 +39,7 @@ public class MiniTennis extends JPanel{ //расширяет возможнос�
         frame.add(game);
         frame.setSize(500, 600);
         frame.setVisible(true);//makes the frame appear onscreen
-        frame.setBackground(Color.BLACK);
+        //frame.setBackground(Color.BLACK);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         while (true) {
             game.move();
@@ -47,6 +47,7 @@ public class MiniTennis extends JPanel{ //расширяет возможнос�
             Thread.sleep(13);
         }
     }
+
     public void paint(Graphics g) {//Графический контекст отвечает за любой рисунок в игре
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
