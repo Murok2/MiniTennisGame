@@ -1,2 +1,2 @@
 # Mini-Tennis
-This projec is for course CS102
+This projec is for course Data Structures
